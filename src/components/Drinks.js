@@ -20,10 +20,6 @@ function getIngredients (obj) {
     return drinkIng
 }
 
-
-
-
-
 export default function Drinks() {
     const [drinks, setDrinks] = useState([])
     const [ingredients, setIngredients] = useState([])
@@ -41,10 +37,7 @@ export default function Drinks() {
     }
 
   return (
-    <>
-    <form>
-        <input type="text" name="" />
-    </form>
+    <main className='main-wrapper'>
     <button
         onClick={fetchDrinks}
     >
@@ -55,21 +48,17 @@ export default function Drinks() {
             <ul>
                 {drinks.strDrink && <li>Name: {drinks.strDrink}</li>}
                 {drinks.strDrinkThumb && <img src={drinks.strDrinkThumb} alt="drink"></img>}
-                {drinks.strVideo && 
-                <video
-                    // src={drinks.strVideo}
-                    width="300"
-                    height="300">
-                    <source src={drinks.strVideo}/>
-                </video>}
+                {drinks.strVideo && <span><a href={drinks.strVideo}>See It Mixed</a></span>}
                 <li>{drinks.strInstructions}</li>
                 {ingredients && ingredients.map(el => {
                     if(el.ingredient != null) {
-                        return <li key={`${el.ingredient}-${el.measure}`}>{`${el.ingredient}: ${el.measure ? el.measure : ''}`}</li>
+                        return <li key={`${el.ingredient}-${el.measure}`}>
+                            {`${el.ingredient}${el.measure ? ': ' + el.measure : ''}`}
+                            </li>
                     }
                 })}
             </ul>
         </section>
-    </>
+    </main>
   )
 }

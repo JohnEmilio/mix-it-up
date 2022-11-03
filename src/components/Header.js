@@ -12,7 +12,7 @@ export default function Header () {
                     <ul className="nav-list">
                         <li className="list-item"><a href="/">Home</a></li>
                         <li className="list-item"><a href="/signup">Sign Up</a></li>
-                        <li className="list-item"><a href="/user">Dashboard</a></li>
+                        <li className="list-item"><a href="/dashboard">My Mixes</a></li>
                         <li className="list-item"><a href="/login">Login</a></li>
                     </ul>
                 </nav>
