@@ -3,7 +3,7 @@ Your one stop shop for searching you favorite cocktails, finding new recipes, an
 
 
 
-![Mix It Up Main page](https://ibb.co/TMqpt3C)
+![Mix It Up Main page](https://i.imgur.com/tA7SRnr.png)
 
 ## How It's Made:
 
